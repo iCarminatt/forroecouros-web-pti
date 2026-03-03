@@ -18,7 +18,7 @@ window.addEventListener('scroll', () => {
 /* Animações ao entrar na viewport */
 const obs = new IntersectionObserver(
   (entries) => entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visivel'); obs.unobserve(e.target); }
+    if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }
   }),
   { threshold: 0.12 }
 );
@@ -38,6 +38,6 @@ document.getElementById('formulario').addEventListener('submit', function(e) {
   setTimeout(() => {
     this.reset();
     btn.style.display = 'none';
-    document.getElementById('form-sucesso').style.display = 'block';
+    document.getElementById('form-ok').style.display = 'block';
   }, 1200);
 });
